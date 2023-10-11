@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This form is about data submission of students to join coding club">
+    <title>Coding-club Recruitment</title>
+    <style>
+        .cent{
+            background-color: rgb(239, 228, 214);
+            margin :20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding club Registration</h1>
+    <form action="post">
+    <div class="cent">
+    <div>
+        <label for="name" id="fname" name="fname" >Full Name</label>
+        <input type="text" name="username" placeholder="Enter your name" required><br>
+        <label for="email" id="lemail" name="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div>
+        <label for="year" id="lyear" name="year">Select your year:</label>
+        <select name="year" id="year">
+            <option value="choose">Choose Year</option>
+            <option value="firstyear">1st Year</option>
+            <option value="secondyear">2st Year</option>
+            <option value="thirdyear">3st Year</option>
+            <option value="fourthyear">4st Year</option>
+        </select>
+    </div>
+    <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" id="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female" id="female">Female</label>
+    </div>
+        <label for="skill" id="skill">Your skills(check the boxes..)</label>
+    <div>
+        <ol>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">c/c++/<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">Java<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">Python<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">Ruby<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">Assembly<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">c#<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">DSA<label></li>
+        <li><input type="checkbox" id="skill" name="skill">
+        <label for="skills">AI/ML<label></li>
+        </ol>
+    </div>
+    <div>
+        <label for="comment ">What do you intend to learn from the club..</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Start here"></textarea>
+    </div>
+    </div>
+    </form>
+</body>
+
+</html>
