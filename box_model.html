@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="css ">
+    <title>Document</title>
+    <style>
+        /* Internal CSS */
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #margin {
+            border: 5px solid black;
+            text-align: center;
+            background-color: rgb(176, 131, 84);
+
+        }
+
+        #border {
+            border: 5px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 50px;
+            background-color: #E4C482;
+
+        }
+
+        #padding {
+            border: 5px solid black;
+            text-align: center;
+            padding: 10px 10px;
+            margin: 30px;
+            background-color: rgb(184, 196, 128);
+
+        }
+
+        #content {
+            border: 5px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 30px;
+            background-color: rgb(136, 178, 189);
+
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="margin">
+        <p>
+            <b>Margin -outermost part</b>
+        </p>
+        <div id="border">
+            <p>
+                <b>Border</b>
+            </p>
+            <div id="padding">
+                <p>
+                    <b>Padding</b>
+                </p>
+                <div id="content">
+                    <p>
+                        <b>This is the content and the innermost part</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
