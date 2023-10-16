@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in css</title>
+    <style>
+        
+        .two{
+            color: bisque;
+        }
+        
+        .three{color:aquamarine
+        }
+        
+        .one{
+            color:purple;
+        }
+
+        /* Attribute selector */
+        [data-x=a]
+        {
+            background-color: bisque;
+        }
+
+        /* Use of important flag.. */
+        p{
+            color: maroon !important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="one two three" data-x="a">
+             CSS Specificity 
+        </h1>
+    </div>
+    <h2>CSS has specificity and cascading algorithm that helps to distinguish between selectors ... it may be btwn id and class or class vs class or element vs class or inline vs class. And here there is an rule that is <pre>" Inline CSS (1000) > ID selector (100) > Class or attribute selector (10) > Element Selector (1) > Universal Selector (0) "</pre></h2>
+    <h3>* We could also bypass inline selector using the "important" flag in css. Pseudo class have 10 specificity !!</h3>
+    <p style="color: cadetblue;">
+        I am given !important style that overrides the inline style also !! 
+    </p>
+</body>
+</html>
