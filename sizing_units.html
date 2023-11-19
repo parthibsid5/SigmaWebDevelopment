@@ -1,25 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="PX - its the pixel that our display is divided into, suppose 1048 pilexs ..  first we need to make the margin and  padding to 0 to de initialise the default  and then we can apply width to pixels 
+
+    box-sizing: border-box; makes the sizing better as it sets the padding and margin within the apecifies width or heights without taking extra area 
+   
+   VW- The viewport is the user's visible area of a web page.   Good oractice to set it ..since it allows multiple device better viewing
+   VW & VH -width 80 vw and height 80 vh , then 80 percent of the viewing area will be alloted to the element 
+   
+   Margin auto sets the margin equal to the left and right in 
+   block elements only
+   margin:23px auto  -  top botton 23 and left right auto
+   
+   Default font size  16 px
+   So  pixels/16=em , 1 em means 16 that is default font size  and 2 em means  32 px that if if we write font size 2em then it would be 32 px  font size
+   Rem its root*em  of that . Root is the html document so if 1 rem then font aize will be 16 px since default font is 16 px 
+   
+   Vmin   the minimum dimension in that device 
+   Vmax the maximum dimension in that device
+   In mobile width is vmax and in pc height is  min  and vice versa
+   
+   
+   Width :50% then that element will hire the 50 percent width of the parent element..
+   element > child 1 > grandchild ">
+    <title>Sizing_Units</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .box{
+
+        .box {
             border: 2px solid black;
             /* width: 2048px; */
             width: 80vw;
-            margin:auto;
+            height: 10vh;
+            margin: auto;
             box-sizing: border-box;
             background-color: aquamarine;
         }
+
+        /* html is the root elemnt.. */
+        html {
+            font-size: 12px;
+
+        }
+
+        .container {
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 80vw;
+            height: 80vh;
+            margin: 23px auto;
+            box-sizing: border-box;
+            /* the font size taken is for reference..default is 16 px.. */
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        .container p {
+            /* 2rem means 2 times the root element size  */
+            /* font-size: 2.5rem;  */
+            /* 2em means 2 times the parent element size */
+            font-size: 2em;
+        }
+
+        /* margin auto , width  will have no efect on inline element */
+        .box2 {
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 60px;
+            margin: 10px auto;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: aquamarine;
+        }
+
+        .mycont {
+            border: 2px solid black;
+            background-color: red;
+            color: yellowgreen;
+            box-sizing: border-box;
+            margin: 10px auto;
+            font-size: 20px;
+            width: 80vmax;
+            min-height: 80vh;
+
+
+        }
     </style>
 </head>
+
 <body>
     <div class="box">This is a box</div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni animi, neque excepturi
+            repellendus soluta repellat eos odio culpa, ullam quasi cupiditate. Facilis laborum saepe maiores impedit
+            repudiandae minima. Dolorem quisquam id dolor eligendi quod. Pariatur doloremque consequuntur cumque unde
+            optio
+            deleniti magnam impedit excepturi voluptatibus ipsum magni inventore eveniet voluptatem, aliquid modi.
+            Praesentium autem vitae odit.
+        </p>
+    </div>
+    <span class="box2">This is a span element</span>
+    <div class="mycont">This is the use of vmin and v max , these are units that are adjusted acc to device, for desktop
+        vmin is the height and for mobile devices vmin is the width and vice-versa for the vmax..
+    <p>we have set the min height to 80 that is the default height is 80 and then if we want to add more text then the height will automaticaly increase..</p></div>
 </body>
+
 </html>
