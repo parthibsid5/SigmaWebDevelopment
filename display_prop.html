@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Display properties</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        /* display inline prevents width from having an effect  and display-inline does it for us..*/
+        .box{
+            border: 2px solid black;
+            /* display: inline; */
+            display: inline-block;
+            padding: 40px;
+            margin: 30px;
+            width: 344px;
+        }
+        .box1{
+            /* none will remove the element and space */
+            /* display: none; */
+
+            /* visibility hidden will hide the element but not the space  */
+            /* visibility: hidden; */
+
+        }
+        .cont{
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Hello I am a robot</div>
+    <div class="box">I can do anything..</div>
+    <span class="cont">Today its worldcup final..</span>
+</body>
+</html>
