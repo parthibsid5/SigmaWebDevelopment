@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Outlines & Shadows</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            box-shadow: 5px 5px 15px 5px #ff0000;
+            margin: auto;
+            width: 80vw;
+        }
+        /* Outline offset is used to move the outline closer or farther..and outline follows border in case if border radius is given.. */
+        .text-shadow{
+            text-shadow:-1px 4px 5px rebeccapurple ;
+            outline: 2px solid black;
+            outline-offset: 4px;                 
+            border: 2px solid green;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- box-shadow: h-offset v-offset blur spread color inset; -->
+    <div class="box"><b>H-offset and v-offset:</b> Determines the shadow's horizontal and vertical position.
+        <b>blur:</b> The larger the value, the blurrier the shadow.
+        <b>color:</b> Defines the shadow color.
+        <b>inset:</b> Makes the shadow inner.
+    </div>
+    <p class="text-shadow">Now we will discuss text shadow in css ..Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rem ut, nihil maiores corrupti repellat delectus ipsa sequi iure necessitatibus doloremque, reprehenderit vero dolore veritatis reiciendis porro mollitia nobis? Non provident dolorum illo tempora saepe.</p>
+</body>
+
+</html>
