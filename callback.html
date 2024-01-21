@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <div class="box">This is a box</div>
+</body>
+<script>
+    console.log("Asynchronous functions are those functions that we initiate now and they gets finished latter like setTimer..\nSunchronous are those that are initialized and finished one by one ..like console.log")
+    console.log("Lets get started..")
+    // setTimeout(() => {
+    //     console.log("I am inside asynchronous function..")
+    // }, 2000);
+    console.log("I am outside..")
+    console.log("Now we will look about callback functions... ")
+    const callback=(arg)=>{
+        console.log(arg)
+    }
+    const loadscript=(src,callback)=>{
+        let sc=document.createElement("script")
+        sc.src=src
+        sc.onload=callback("Hello Tom")
+        document.head.append(sc)
+    }
+    loadscript("JS/node_exclusive/new.js",callback)
+
+    
+</script>
+</html>
