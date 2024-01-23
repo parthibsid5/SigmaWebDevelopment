@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch api</title>
+</head>
+
+<body>
+    <div class="con">This is the fetch api tutorial.. Lets see an example...</div>
+    <button id="btn">Cat-facts</button>
+    <p id="cat-fact"></p>
+</body>
+<script>
+
+    // Fetch api provides an interface for fetching(sending/ recieving) resources
+    // It uses request and response objects
+    // It returns a promise
+
+    const cat_fact = document.querySelector("#cat-fact")
+    const URL = "https://cat-fact.herokuapp.com/facts";
+    const btn = document.querySelector("#btn")
+
+    const getfacts = (async () => {
+        console.log("Getting data...")
+        let response = await fetch(URL)
+        console.log(response)//JSON fromat
+        let data = await response.json();
+        console.log(data);
+        for (const key in data) {
+            const text = data[key].text
+            console.log(text)
+        }
+        cat_fact.innerText = data[2].text
+    })
+
+
+    //also by promise chaining
+
+    // function getfacts() {
+    //         fetch(URL)
+    //             .then((res) => {
+    //                 return res.json();
+    //             })
+    //             .then((data) => {
+    //                 console.log(data);
+    //                 cat_fact.innerHTML = data[2].text
+    //             })
+    //     }
+
+    btn.addEventListener("click", getfacts);
+
+</script>
+
+</html>
