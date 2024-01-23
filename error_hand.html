@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling Example</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log("Let's look into the error handling mechanism...");
+
+    let f = prompt("Enter the first number: "); // accepts as string
+    let s = prompt("Enter the second number: ");
+
+    if (isNaN(f) || isNaN(s)) {
+        throw new SyntaxError("Sorry, syntax error occurred.");
+    }
+
+    let sum = parseFloat(f) + parseFloat(s);
+    console.log("Sum is ", sum);
+
+    let x =2; // This will cause an exception in the try block
+
+    function calculate() {
+        try {
+            console.log(sum * x); // This will throw a TypeError
+            return true;
+        } catch (e) {
+            console.log("Error has occurred: ");
+            return false;
+        } finally {
+            console.log("Closing Server...Timed out..!!");
+        }
+    }
+// simply giving console.log will not print the last line since upon successfull execution of try it will  exit the function..but for some reason of still want to run some code at the bottom then we must use finally 
+    let ret = calculate();
+    console.log(ret);
+</script>
+
+</html>
